@@ -118,9 +118,6 @@ a {
 }
 
 @media (max-width: 520px) {
-  .site-nav ul {
-    gap: 0;
-  }
   .site-nav ul li a {
     padding: 12px 14px;
     font-size: 12px;
@@ -163,77 +160,28 @@ a {
   color: #fff;
   letter-spacing: 0.06em;
   line-height: 1.6;
-  margin-bottom: 12px;
   text-shadow: 0 2px 16px rgba(0,0,0,0.5);
 }
 
-.hero-sub {
-  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
-  font-size: clamp(12px, 1.8vw, 16px);
-  color: rgba(255,255,255,0.9);
-  letter-spacing: 0.2em;
-  text-shadow: 0 1px 8px rgba(0,0,0,0.4);
-}
-
 /* =============================
-   HERO CTA
+   TAGLINE
 ============================= */
-.hero-cta {
+.tagline {
   text-align: center;
-  padding: 56px 28px;
+  padding: 72px 28px;
   border-bottom: 1px solid #e5e5e5;
 }
 
-.btn-cta {
-  display: inline-block;
-  padding: 18px 56px;
-  background: #1a1a1a;
-  color: #fff;
-  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
-  font-size: 15px;
-  letter-spacing: 0.18em;
-  transition: opacity 0.22s;
-}
-
-.btn-cta:hover {
-  opacity: 0.75;
-}
-
-@media (max-width: 520px) {
-  .hero-cta {
-    padding: 44px 28px;
-  }
-  .btn-cta {
-    padding: 16px 40px;
-    font-size: 14px;
-    width: 100%;
-    max-width: 320px;
-  }
-}
-
-/* =============================
-   SHARED SECTION WRAPPER
-============================= */
-.section-wrap {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 72px 28px;
-}
-
-/* =============================
-   INTRO
-============================= */
-.intro p {
-  font-size: 15px;
-  line-height: 2.2;
-  color: #444;
+.tagline p {
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  color: #888;
 }
 
 /* =============================
    家でも食べる
 ============================= */
 .takeout {
-  border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -307,15 +255,23 @@ a {
   .takeout-img {
     height: 70vw;
     min-height: 260px;
+    order: 2;
   }
   .takeout-text {
     padding: 44px 28px;
+    order: 1;
   }
 }
 
 /* =============================
    この店について
 ============================= */
+.section-wrap {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 72px 28px;
+}
+
 .about {
   border-top: 1px solid #e5e5e5;
 }
@@ -455,48 +411,34 @@ a {
     alt="グランドセントラルのカレー">
   <div class="hero-overlay">
     <h1 class="hero-title">カレー屋 グランドセントラル</h1>
-    <p class="hero-sub">カレーはコミュニケーションツール。</p>
   </div>
 </div>
 
-<!-- ===== HERO CTA ===== -->
-<div class="hero-cta">
-  <a
-    href="https://grandcentral.thebase.in/"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="btn-cta">冷凍カレーを買う</a>
+<!-- ===== TAGLINE ===== -->
+<div class="tagline">
+  <p>カレーは、コミュニケーションツール。</p>
 </div>
-
-<!-- ===== INTRO ===== -->
-<section class="section-wrap intro">
-  <p>
-    ほぼ独学でカレーを学んできました。<br>
-    毎週レシピを少しずつ変えながら、<br>
-    自分なりのおいしさを探し続けています。
-  </p>
-</section>
 
 <!-- ===== 家でも食べる ===== -->
 <section class="takeout" id="takeout">
   <div class="takeout-inner">
-    <img
-      class="takeout-img"
-      src="https://currygracen.com/wp-content/uploads/2024/06/%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E5%86%B7%E5%87%8D-scaled.jpg"
-      alt="冷凍カレー">
     <div class="takeout-text">
       <span class="takeout-label">Online Shop</span>
       <h2>家でも食べる</h2>
       <p>
-        店のカレーを、家でも楽しめます。<br>
-        冷凍カレーとスパイス、販売してます。
+        店のカレーを、家でも。<br>
+        冷凍カレーとスパイスを販売しています。
       </p>
       <a
         href="https://grandcentral.thebase.in/"
         target="_blank"
         rel="noopener noreferrer"
-        class="btn-outline">冷凍カレーを買う</a>
+        class="btn-outline">オンラインショップを見る</a>
     </div>
+    <img
+      class="takeout-img"
+      src="https://currygracen.com/wp-content/uploads/2024/06/%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E5%86%B7%E5%87%8D-scaled.jpg"
+      alt="冷凍カレー">
   </div>
 </section>
 
