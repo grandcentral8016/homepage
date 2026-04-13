@@ -142,13 +142,13 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
+  object-position: center 25%;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.32);
+  background: rgba(0, 0, 0, 0.38);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -158,21 +158,57 @@ a {
 }
 
 .hero-title {
-  font-size: clamp(22px, 4.5vw, 46px);
+  font-size: clamp(20px, 4vw, 42px);
   font-weight: 400;
   color: #fff;
-  letter-spacing: 0.04em;
-  line-height: 1.5;
-  margin-bottom: 18px;
-  text-shadow: 0 2px 16px rgba(0,0,0,0.4);
+  letter-spacing: 0.06em;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.5);
 }
 
 .hero-sub {
   font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
-  font-size: clamp(12px, 1.8vw, 15px);
-  color: rgba(255,255,255,0.88);
-  letter-spacing: 0.22em;
+  font-size: clamp(12px, 1.8vw, 16px);
+  color: rgba(255,255,255,0.9);
+  letter-spacing: 0.2em;
   text-shadow: 0 1px 8px rgba(0,0,0,0.4);
+}
+
+/* =============================
+   HERO CTA
+============================= */
+.hero-cta {
+  text-align: center;
+  padding: 56px 28px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.btn-cta {
+  display: inline-block;
+  padding: 18px 56px;
+  background: #1a1a1a;
+  color: #fff;
+  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.18em;
+  transition: opacity 0.22s;
+}
+
+.btn-cta:hover {
+  opacity: 0.75;
+}
+
+@media (max-width: 520px) {
+  .hero-cta {
+    padding: 44px 28px;
+  }
+  .btn-cta {
+    padding: 16px 40px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 320px;
+  }
 }
 
 /* =============================
@@ -275,20 +311,6 @@ a {
   .takeout-text {
     padding: 44px 28px;
   }
-}
-
-/* =============================
-   CURRY PHOTO
-============================= */
-.curry-photo-section {
-  width: 100%;
-}
-
-.curry-photo-section img {
-  width: 100%;
-  height: 65vh;
-  object-fit: cover;
-  object-position: center 25%;
 }
 
 /* =============================
@@ -429,12 +451,21 @@ a {
 <div class="hero" id="home">
   <img
     class="hero-img"
-    src="https://currygracen.com/wp-content/uploads/2024/06/%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%891.jpg"
-    alt="グランドセントラル店内">
+    src="curry_new_0.jpg"
+    alt="グランドセントラルのカレー">
   <div class="hero-overlay">
-    <h1 class="hero-title">カレーはコミュニケーションツール。</h1>
-    <p class="hero-sub">大阪・庄内のカレー屋</p>
+    <h1 class="hero-title">カレー屋 グランドセントラル</h1>
+    <p class="hero-sub">カレーはコミュニケーションツール。</p>
   </div>
+</div>
+
+<!-- ===== HERO CTA ===== -->
+<div class="hero-cta">
+  <a
+    href="https://grandcentral.thebase.in/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="btn-cta">冷凍カレーを買う</a>
 </div>
 
 <!-- ===== INTRO ===== -->
@@ -468,13 +499,6 @@ a {
     </div>
   </div>
 </section>
-
-<!-- ===== CURRY PHOTO ===== -->
-<div class="curry-photo-section">
-  <img
-    src="curry_new_0.jpg"
-    alt="グランドセントラルのカレー">
-</div>
 
 <!-- ===== この店について ===== -->
 <section class="section-wrap about" id="about">
