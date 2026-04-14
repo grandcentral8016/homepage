@@ -117,7 +117,7 @@ a {
   border-color: #1a1a1a;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 768px) {
   .site-nav ul li a {
     padding: 12px 14px;
     font-size: 12px;
@@ -168,14 +168,15 @@ a {
 ============================= */
 .tagline {
   text-align: center;
-  padding: 72px 28px;
+  padding: 72px 20px;
   border-bottom: 1px solid #e5e5e5;
 }
 
 .tagline p {
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 0.2em;
   color: #888;
+  line-height: 1.8;
 }
 
 /* =============================
@@ -183,6 +184,7 @@ a {
 ============================= */
 .takeout {
   border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 0;
 }
 
 .takeout-inner {
@@ -199,6 +201,7 @@ a {
   object-fit: cover;
   object-position: center;
   display: block;
+  border-radius: 10px;
 }
 
 .takeout-text {
@@ -225,7 +228,7 @@ a {
 
 .takeout-text p {
   font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 2;
   color: #666;
   margin-bottom: 36px;
@@ -248,46 +251,74 @@ a {
   color: #fff;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .takeout-inner {
     grid-template-columns: 1fr;
   }
   .takeout-img {
-    height: 70vw;
+    height: 72vw;
     min-height: 260px;
-    order: 2;
+    width: 100%;
+    border-radius: 10px;
+    order: 1;
   }
   .takeout-text {
-    padding: 44px 28px;
-    order: 1;
+    padding: 36px 20px;
+    order: 2;
+  }
+  .takeout-text h2 {
+    font-size: 20px;
+  }
+  .takeout-text p {
+    font-size: 16px;
   }
 }
 
 /* =============================
    この店について
 ============================= */
-.section-wrap {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 72px 28px;
-}
-
-.about {
+.about-section {
   border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  margin: 60px 0;
 }
 
-.about h2 {
+.about-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 0;
+}
+
+.about-img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 10px;
+}
+
+.about-text {
+  padding: 64px 56px;
+}
+
+.about-text h2 {
   font-size: 19px;
   font-weight: 400;
   letter-spacing: 0.04em;
   margin-bottom: 22px;
+  line-height: 1.8;
 }
 
-.about p {
+.about-text p {
   font-size: 15px;
   line-height: 2.2;
   color: #444;
   margin-bottom: 28px;
+  letter-spacing: 0.04em;
 }
 
 .link-more {
@@ -304,9 +335,42 @@ a {
   opacity: 0.6;
 }
 
+@media (max-width: 768px) {
+  .about-section {
+    margin: 0;
+  }
+  .about-inner {
+    grid-template-columns: 1fr;
+  }
+  .about-img {
+    height: 72vw;
+    min-height: 260px;
+    width: 100%;
+    border-radius: 10px;
+    order: 1;
+  }
+  .about-text {
+    padding: 36px 20px;
+    order: 2;
+  }
+  .about-text h2 {
+    font-size: 18px;
+  }
+  .about-text p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+}
+
 /* =============================
    店舗情報
 ============================= */
+.section-wrap {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 72px 28px;
+}
+
 .store-info {
   border-top: 1px solid #e5e5e5;
 }
@@ -350,12 +414,24 @@ a {
   opacity: 0.75;
 }
 
+@media (max-width: 768px) {
+  .section-wrap {
+    padding: 60px 20px;
+  }
+  .store-name {
+    font-size: 17px;
+  }
+  .store-detail {
+    font-size: 15px;
+  }
+}
+
 /* =============================
    FOOTER
 ============================= */
 .site-footer {
   border-top: 1px solid #e5e5e5;
-  padding: 32px 28px;
+  padding: 32px 20px;
   text-align: center;
   font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
   font-size: 11px;
@@ -443,14 +519,22 @@ a {
 </section>
 
 <!-- ===== この店について ===== -->
-<section class="section-wrap about" id="about">
-  <h2>この店について</h2>
-  <p>
-    2020年3月、大阪・豊中市の庄内にオープンしました。<br>
-    カレーを通じて、人と人がつながる場所でありたいと思っています。<br>
-    毎日4種類のカレーを仕込み、日々進化中です。
-  </p>
-  <a href="https://currygracen.com/about/" class="link-more">続きを読む</a>
+<section class="about-section" id="about">
+  <div class="about-inner">
+    <img
+      class="about-img"
+      src="https://currygracen.com/wp-content/uploads/2024/06/%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%891.jpg"
+      alt="グランドセントラル店内">
+    <div class="about-text">
+      <h2>この店について</h2>
+      <p>
+        2020年3月、大阪・豊中市の庄内にオープンしました。<br>
+        カレーを通じて、人と人がつながる場所でありたいと思っています。<br>
+        毎日4種類のカレーを仕込み、日々進化中です。
+      </p>
+      <a href="https://currygracen.com/about/" class="link-more">続きを読む</a>
+    </div>
+  </div>
 </section>
 
 <!-- ===== 店舗情報 ===== -->
