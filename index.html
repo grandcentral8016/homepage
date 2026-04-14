@@ -290,7 +290,6 @@ a {
 .about-section {
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
-  margin: 60px 0;
 }
 
 .about-inner {
@@ -298,77 +297,94 @@ a {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
   gap: 0;
 }
 
-.about-img {
-  width: 100%;
-  height: 460px;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  border-radius: 10px;
+.about-block {
+  padding: 72px 56px;
 }
 
-.about-text {
-  padding: 64px 56px;
+.about-block:first-child {
+  border-right: 1px solid #e5e5e5;
 }
 
-.about-text h2 {
-  font-size: 19px;
+.about-block-title {
+  font-size: 17px;
   font-weight: 400;
   letter-spacing: 0.04em;
-  margin-bottom: 22px;
-  line-height: 1.8;
-}
-
-.about-text p {
-  font-size: 15px;
-  line-height: 2.2;
-  color: #444;
+  line-height: 1.6;
   margin-bottom: 28px;
-  letter-spacing: 0.04em;
-}
-
-.link-more {
-  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.14em;
   color: #1a1a1a;
-  border-bottom: 1px solid #1a1a1a;
-  padding-bottom: 2px;
-  transition: opacity 0.2s;
 }
 
-.link-more:hover {
-  opacity: 0.6;
+.about-block-title em {
+  font-style: normal;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: #999;
+  display: block;
+  margin-bottom: 10px;
+  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+}
+
+.about-block p {
+  font-size: 15px;
+  line-height: 2.0;
+  color: #555;
+  letter-spacing: 0.04em;
+  margin-bottom: 20px;
+}
+
+.about-block p:last-child {
+  margin-bottom: 0;
+}
+
+.about-cta {
+  text-align: center;
+  padding: 56px 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 16px 52px;
+  background: #1a1a1a;
+  color: #fff;
+  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  transition: opacity 0.22s;
+}
+
+.btn-primary:hover {
+  opacity: 0.7;
 }
 
 @media (max-width: 768px) {
-  .about-section {
-    margin: 0;
-  }
   .about-inner {
     grid-template-columns: 1fr;
   }
-  .about-img {
-    height: 72vw;
-    min-height: 260px;
-    width: 100%;
-    border-radius: 10px;
-    order: 1;
+  .about-block {
+    padding: 48px 20px;
   }
-  .about-text {
-    padding: 36px 20px;
-    order: 2;
+  .about-block:first-child {
+    border-right: none;
+    border-bottom: 1px solid #e5e5e5;
   }
-  .about-text h2 {
-    font-size: 18px;
-  }
-  .about-text p {
+  .about-block-title {
     font-size: 16px;
-    line-height: 1.8;
+  }
+  .about-block p {
+    font-size: 16px;
+    line-height: 1.9;
+  }
+  .about-cta {
+    padding: 44px 20px;
+  }
+  .btn-primary {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
   }
 }
 
@@ -531,21 +547,39 @@ a {
 <!-- ===== この店について ===== -->
 <section class="about-section" id="about">
   <div class="about-inner">
-    <img
-      class="about-img"
-      src="store_interior.jpg"
-      alt="グランドセントラル店内">
-    <div class="about-text">
-      <h2>この店について</h2>
-      <p>
-        2020年3月、大阪・豊中市の庄内にオープンしました。<br>
-        カレーを通じて、人と人がつながる場所でありたいと思っています。<br>
-        毎日4種類のカレーを仕込み、日々進化中です。
-      </p>
-      <a href="https://currygracen.com/about/" class="link-more">続きを読む</a>
+
+    <!-- 左ブロック -->
+    <div class="about-block">
+      <h2 class="about-block-title">
+        <em>see.</em>
+        LIFE is not so bad.
+      </h2>
+      <p>思い通りにいかない日も、<br>少しだけ救われる瞬間がある。</p>
+      <p>うまくいかなくても、<br>悪くないと思える日もある。</p>
+      <p>カレーもたぶん同じで、<br>完璧じゃなくてもいい。</p>
+      <p>その時の自分にちょうどいい味を、<br>家でも食べてもらえたらと思っています。</p>
     </div>
+
+    <!-- 右ブロック -->
+    <div class="about-block">
+      <h2 class="about-block-title">カレーは、<br>コミュニケーションツール。</h2>
+      <p>はじめてカレーを作ったのは、<br>旅先のキッチンでした。</p>
+      <p>誰かに食べてもらって、<br>美味しいと言ってもらえたことが、<br>今でもずっと残っています。</p>
+      <p>それ以来、カレーはただの料理ではなく、<br>人と人をつなぐものになりました。</p>
+      <p>お店でも、家でも、<br>そのきっかけになればいいなと思っています。</p>
+    </div>
+
   </div>
 </section>
+
+<!-- ===== ABOUT CTA ===== -->
+<div class="about-cta">
+  <a
+    href="https://grandcentral.thebase.in/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="btn-primary">冷凍カレーはこちら</a>
+</div>
 
 <!-- ===== 店舗情報 ===== -->
 <section class="section-wrap store-info" id="info">
