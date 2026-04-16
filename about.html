@@ -3,29 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>この店について | カレー屋 グランドセントラル</title>
+<title>この店について — カレー屋 グランドセントラル</title>
 <style>
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 
 body {
   font-family: "Hiragino Mincho ProN", "Yu Mincho", "HGS明朝E", Georgia, serif;
   color: #1a1a1a;
   background: #fff;
-  line-height: 1.8;
   -webkit-font-smoothing: antialiased;
 }
 
 img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 
-/* ========== HEADER ========== */
+/* ===== HEADER ===== */
 .site-header {
   position: sticky;
   top: 0;
@@ -38,122 +32,159 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   justify-content: space-between;
 }
-
-.header-logo a { display: flex; align-items: center; }
 .header-logo img { height: 44px; width: auto; }
-
 .header-icons { display: flex; align-items: center; gap: 18px; }
-.header-icons a {
-  display: flex; align-items: center; justify-content: center;
-  opacity: 0.8; transition: opacity 0.2s;
-}
+.header-icons a { display: flex; align-items: center; opacity: 0.8; transition: opacity 0.2s; }
 .header-icons a:hover { opacity: 1; }
 .header-icons svg { width: 22px; height: 22px; fill: #1a1a1a; }
 
-/* ========== NAV ========== */
-.site-nav {
-  border-bottom: 1px solid #e5e5e5;
-  background: #fff;
-}
-.site-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-}
+/* ===== NAV ===== */
+.site-nav { border-bottom: 1px solid #e5e5e5; }
+.site-nav ul { list-style: none; display: flex; justify-content: center; }
 .site-nav ul li a {
   display: block;
   padding: 13px 28px;
-  font-family: "Hiragino Sans", "Yu Gothic Medium", "Yu Gothic", sans-serif;
+  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
   font-size: 13px;
   letter-spacing: 0.06em;
-  color: #1a1a1a;
   border-bottom: 2px solid transparent;
   transition: border-color 0.2s;
 }
 .site-nav ul li a:hover,
 .site-nav ul li a.active { border-color: #1a1a1a; }
 
-@media (max-width: 768px) {
-  .site-nav ul li a { padding: 12px 14px; font-size: 12px; }
+@media (max-width: 520px) {
+  .site-nav ul li a { padding: 12px 13px; font-size: 12px; }
 }
 
-/* ========== ABOUT PAGE ========== */
-.about-page {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 80px 40px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: start;
+/* ===== PAGE ===== */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-/* 左カラム */
-.about-left {}
-
-.about-left-photo {
+/* ① テーマ */
+.about__theme {
   width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: 4px;
-  margin-bottom: 52px;
+  padding: 72px 28px 100px;
 }
 
-.about-section-title {
-  font-size: 18px;
+.about__wall {
+  max-width: 700px;
+  margin: 0 auto 56px;
+}
+
+.about__wall img {
+  width: 100%;
+  border-radius: 12px;
+}
+.about__theme h1 {
+  font-size: clamp(30px, 5vw, 46px);
   font-weight: 400;
-  letter-spacing: 0.04em;
-  line-height: 1.6;
-  margin-bottom: 28px;
-  color: #1a1a1a;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
 }
 
-.about-section-title .en {
-  display: block;
-  font-size: 11px;
-  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
-  letter-spacing: 0.2em;
-  color: #aaa;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-
-.about-body p {
-  font-size: 15px;
-  line-height: 2.0;
-  color: #555;
-  letter-spacing: 0.04em;
-  margin-bottom: 22px;
-}
-
-.about-body p:last-child { margin-bottom: 0; }
-
-/* 区切り線 */
-.about-divider {
-  border: none;
-  border-top: 1px solid #e5e5e5;
-  margin: 52px 0;
-}
-
-/* 右カラム */
-.about-right {
-  position: sticky;
-  top: 100px;
-}
-
-.about-right-photo {
+/* ② サブコピー */
+.about__sub {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: 4px;
+  border-top: 1px solid #ebebeb;
+  padding: 56px 28px;
+}
+.about__sub p {
+  font-size: 14px;
+  line-height: 2.1;
+  letter-spacing: 0.1em;
+  color: #666;
 }
 
-/* ========== FOOTER ========== */
+/* ③ 詩ブロック */
+.about__poem {
+  max-width: 520px;
+  width: 100%;
+  padding: 80px 28px;
+}
+.about__poem p {
+  font-size: 15px;
+  line-height: 2.2;
+  letter-spacing: 0.06em;
+  color: #444;
+  margin-bottom: 48px;
+}
+.about__poem p:last-child { margin-bottom: 0; }
+
+/* ④ 写真 */
+.about__photo {
+  max-width: 700px;
+  width: 100%;
+  padding: 0 28px 96px;
+}
+.about__photo img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* 写真下本文 */
+.about__caption {
+  max-width: 560px;
+  width: 100%;
+  padding: 56px 28px 80px;
+  text-align: center;
+}
+.about__caption p {
+  font-size: 15px;
+  line-height: 2.2;
+  letter-spacing: 0.06em;
+  color: #444;
+  margin-bottom: 44px;
+}
+.about__caption p:last-child { margin-bottom: 0; }
+
+/* 写真下タイトル */
+.about__photo-title {
+  width: 100%;
+  padding: 56px 28px 0;
+  text-align: center;
+}
+.about__photo-title h2 {
+  font-size: clamp(30px, 5vw, 46px);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+}
+
+/* ⑤ CTA */
+.about__cta {
+  width: 100%;
+  border-top: 1px solid #ebebeb;
+  padding: 80px 28px 110px;
+}
+.about__cta p {
+  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  color: #999;
+  margin-bottom: 32px;
+}
+.btn-cta {
+  display: inline-block;
+  padding: 14px 52px;
+  border: 1.5px solid #1a1a1a;
+  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  transition: background 0.22s, color 0.22s;
+}
+.btn-cta:hover { background: #1a1a1a; color: #fff; }
+
+/* ===== FOOTER ===== */
 .site-footer {
   border-top: 1px solid #e5e5e5;
-  padding: 32px 20px;
+  padding: 32px 28px;
   text-align: center;
   font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
   font-size: 11px;
@@ -161,41 +192,14 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.1em;
 }
 
-/* ========== RESPONSIVE ========== */
-@media (max-width: 768px) {
-  .about-page {
-    grid-template-columns: 1fr;
-    padding: 48px 20px;
-    gap: 0;
-  }
-
-  .about-right {
-    position: static;
-    margin-top: 52px;
-  }
-
-  .about-left-photo,
-  .about-right-photo {
-    aspect-ratio: 4 / 3;
-    border-radius: 4px;
-  }
-
-  .about-left-photo {
-    margin-bottom: 40px;
-  }
-
-  .about-section-title {
-    font-size: 17px;
-  }
-
-  .about-body p {
-    font-size: 16px;
-    line-height: 1.9;
-  }
-
-  .about-divider {
-    margin: 40px 0;
-  }
+/* ===== RESPONSIVE ===== */
+@media (max-width: 520px) {
+  .about__theme { padding: 88px 24px; }
+  .about__sub { padding: 44px 24px; }
+  .about__poem { padding: 64px 24px; }
+  .about__poem p { margin-bottom: 36px; }
+  .about__photo { padding: 0 24px 72px; }
+  .about__cta { padding: 64px 24px 88px; }
 }
 
 </style>
@@ -206,9 +210,7 @@ a { color: inherit; text-decoration: none; }
 <header class="site-header">
   <div class="header-logo">
     <a href="index.html">
-      <img
-        src="https://currygracen.com/wp-content/uploads/2024/06/a3fd3c09-d1f3-49da-9d00-365e9520faa2-1.jpg"
-        alt="カレー屋 グランドセントラル">
+      <img src="https://currygracen.com/wp-content/uploads/2024/06/a3fd3c09-d1f3-49da-9d00-365e9520faa2-1.jpg" alt="カレー屋 グランドセントラル">
     </a>
   </div>
   <div class="header-icons">
@@ -231,45 +233,76 @@ a { color: inherit; text-decoration: none; }
   </ul>
 </nav>
 
-<!-- MAIN CONTENT -->
-<main class="about-page">
+<!-- ABOUT -->
+<main class="about">
 
-  <!-- 左カラム -->
-  <div class="about-left">
-
-    <!-- 上段：写真 + テキスト① -->
-    <img class="about-left-photo" src="about_left.jpg" alt="グランドセントラルの日常">
-
-    <h2 class="about-section-title">
-      <span class="en">see,</span>
-      Life is not so bad.
-    </h2>
-
-    <div class="about-body">
-      <p>思い通りにいかない日も、<br>少しだけ救われる瞬間がある。</p>
-      <p>うまくいかなくても、<br>悪くないと思える日もある。</p>
-      <p>カレーもたぶん同じで、<br>完璧じゃなくてもいい。</p>
-      <p>その時の自分にちょうどいい味を、<br>家でも食べてもらえたらと思っています。</p>
+  <!-- ① 写真 + テーマ -->
+  <section class="about__theme">
+    <div class="about__wall">
+      <img src="IMG_8328.jpeg" alt="See. Life is not so bad. — 店内の壁">
     </div>
+    <h1>See. Life is not so bad.</h1>
+  </section>
 
-    <hr class="about-divider">
+  <!-- ② サブコピー -->
+  <section class="about__sub">
+    <p>
+      カレーは、ただの料理ではなく<br>
+      旅の延長にあるコミュニケーションツールでした。
+    </p>
+  </section>
 
-    <!-- 下段：テキスト② -->
-    <h2 class="about-section-title">カレーはコミュニケーションツール。</h2>
-
-    <div class="about-body">
-      <p>はじめてカレーを作ったのは、<br>旅先のキッチンでした。</p>
-      <p>誰かに食べてもらって、<br>美味しいと言ってもらえたことが、<br>今でもずっと残っています。</p>
-      <p>それ以来、カレーはただの料理ではなく、<br>人と人をつなぐものになりました。</p>
-      <p>お店でも、家でも、<br>そのきっかけになればいいなと思っています。</p>
-    </div>
-
+  <!-- ③ 詩ブロック -->
+  <div class="about__poem">
+    <p>
+      知らない場所で、知らない人と、<br>
+      同じものを食べる。
+    </p>
+    <p>
+      それだけで、少し距離が縮まる気がしていました。
+    </p>
+    <p>
+      完璧じゃなくてもいい。<br>
+      その時の自分にちょうどいい味があればいい。
+    </p>
   </div>
 
-  <!-- 右カラム：写真 -->
-  <div class="about-right">
-    <img class="about-right-photo" src="about_right.jpg" alt="グランドセントラル">
+  <!-- ④ 写真 + タイトル -->
+  <div class="about__photo">
+    <img src="IMG_5209.JPG" alt="カレーを調理する様子">
   </div>
+  <div class="about__photo-title">
+    <h2>カレーはコミュニケーションツール。</h2>
+  </div>
+
+  <div class="about__caption">
+    <p>
+      カレーは、ただの料理ではなくて<br>
+      人と人の間にある「きっかけ」みたいなものだと思っています。
+    </p>
+    <p>
+      知らない人とでも、同じ鍋を囲んで、<br>
+      同じ香りを感じて、同じものを食べる。
+    </p>
+    <p>
+      それだけで、少し距離が縮まる。
+    </p>
+    <p>
+      お店では完成した一皿を出していますが、<br>
+      本当はその手前にある時間や過程にも、<br>
+      同じくらい価値がある気がしています。
+    </p>
+    <p>
+      たまたま自分にとってそれがカレーだっただけで、<br>
+      これからも、そんな時間をつくれる場所でありたいと思っています。
+    </p>
+  </div>
+
+  <!-- ⑤ CTA -->
+  <section class="about__cta">
+    <p>家でも、このカレーを食べられます</p>
+    <a href="https://grandcentral.thebase.in/" target="_blank" rel="noopener noreferrer" class="btn-cta">冷凍カレーを見る</a>
+  </section>
 
 </main>
 
