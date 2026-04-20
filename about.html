@@ -11,8 +11,8 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: "Hiragino Mincho ProN", "Yu Mincho", "HGS明朝E", Georgia, serif;
-  color: #1a1a1a;
-  background: #fff;
+  color: #fff8ee;
+  background: #7c2f21;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -24,8 +24,8 @@ a { color: inherit; text-decoration: none; }
   position: sticky;
   top: 0;
   z-index: 200;
-  background: #fff;
-  border-bottom: 1px solid #e5e5e5;
+  background: #7c2f21;
+  border-bottom: 1px solid rgba(255,248,238,0.2);
   height: 64px;
   padding: 0 28px;
   display: flex;
@@ -36,10 +36,10 @@ a { color: inherit; text-decoration: none; }
 .header-icons { display: flex; align-items: center; gap: 18px; }
 .header-icons a { display: flex; align-items: center; opacity: 0.8; transition: opacity 0.2s; }
 .header-icons a:hover { opacity: 1; }
-.header-icons svg { width: 22px; height: 22px; fill: #1a1a1a; }
+.header-icons svg { width: 22px; height: 22px; fill: #fff8ee; }
 
 /* ===== NAV ===== */
-.site-nav { border-bottom: 1px solid #e5e5e5; }
+.site-nav { border-bottom: 1px solid rgba(255,248,238,0.2); background: #7c2f21; }
 .site-nav ul { list-style: none; display: flex; justify-content: center; }
 .site-nav ul li a {
   display: block;
@@ -51,7 +51,7 @@ a { color: inherit; text-decoration: none; }
   transition: border-color 0.2s;
 }
 .site-nav ul li a:hover,
-.site-nav ul li a.active { border-color: #1a1a1a; }
+.site-nav ul li a.active { border-color: #fff8ee; }
 
 @media (max-width: 520px) {
   .site-nav ul li a { padding: 12px 13px; font-size: 12px; }
@@ -90,14 +90,14 @@ a { color: inherit; text-decoration: none; }
 /* ② サブコピー */
 .about__sub {
   width: 100%;
-  border-top: 1px solid #ebebeb;
+  border-top: 1px solid rgba(255,248,238,0.2);
   padding: 56px 28px;
 }
 .about__sub p {
   font-size: 14px;
   line-height: 2.1;
   letter-spacing: 0.1em;
-  color: #666;
+  color: rgba(255,248,238,0.7);
 }
 
 /* ③ 詩ブロック */
@@ -110,7 +110,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 15px;
   line-height: 2.2;
   letter-spacing: 0.06em;
-  color: #444;
+  color: rgba(255,248,238,0.85);
   margin-bottom: 48px;
 }
 .about__poem p:last-child { margin-bottom: 0; }
@@ -139,7 +139,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 15px;
   line-height: 2.2;
   letter-spacing: 0.06em;
-  color: #444;
+  color: rgba(255,248,238,0.85);
   margin-bottom: 44px;
 }
 .about__caption p:last-child { margin-bottom: 0; }
@@ -160,37 +160,56 @@ a { color: inherit; text-decoration: none; }
 /* ⑤ CTA */
 .about__cta {
   width: 100%;
-  border-top: 1px solid #ebebeb;
+  border-top: 1px solid rgba(255,248,238,0.2);
   padding: 80px 28px 110px;
 }
 .about__cta p {
   font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
   font-size: 13px;
   letter-spacing: 0.16em;
-  color: #999;
+  color: rgba(255,248,238,0.6);
   margin-bottom: 32px;
 }
 .btn-cta {
   display: inline-block;
   padding: 14px 52px;
-  border: 1.5px solid #1a1a1a;
+  border: 1.5px solid #fff8ee;
   font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
   font-size: 13px;
   letter-spacing: 0.14em;
   transition: background 0.22s, color 0.22s;
 }
-.btn-cta:hover { background: #1a1a1a; color: #fff; }
+.btn-cta:hover { background: #fff8ee; color: #7c2f21; }
 
 /* ===== FOOTER ===== */
 .site-footer {
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid rgba(255,248,238,0.2);
   padding: 32px 28px;
   text-align: center;
   font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
   font-size: 11px;
-  color: #bbb;
+  color: rgba(255,248,238,0.4);
   letter-spacing: 0.1em;
 }
+
+/* ===== SHOP BANNER ===== */
+.shop-banner {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 500;
+  background: #f5e6c8;
+  color: #7c2f21;
+  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  padding: 12px 22px;
+  display: block;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+  transition: opacity 0.2s;
+}
+.shop-banner:hover { opacity: 0.85; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 520px) {
@@ -230,6 +249,7 @@ a { color: inherit; text-decoration: none; }
     <li><a href="index.html#takeout">家でも食べる</a></li>
     <li><a href="about.html" class="active">この店について</a></li>
     <li><a href="index.html#diary">日記</a></li>
+    <li><a href="https://grandcentral.thebase.in/" target="_blank" rel="noopener noreferrer">オンラインショップ</a></li>
   </ul>
 </nav>
 
@@ -310,6 +330,8 @@ a { color: inherit; text-decoration: none; }
 <footer class="site-footer">
   <p>© 2020 カレー屋 グランドセントラル</p>
 </footer>
+
+<a href="https://grandcentral.thebase.in/" target="_blank" rel="noopener noreferrer" class="shop-banner">ONLINE SHOP</a>
 
 </body>
 </html>
