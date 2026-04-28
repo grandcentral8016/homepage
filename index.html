@@ -46,8 +46,8 @@ a {
   z-index: 200;
   background: #7c2f21;
   border-bottom: 1px solid rgba(255,248,238,0.2);
-  height: 80px;
-  padding: 0 28px;
+  height: 112px;
+  padding: 0 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -59,32 +59,48 @@ a {
 }
 
 .header-logo img {
-  height: 74px;
+  height: 100px;
   width: auto;
 }
 
 .header-icons {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 14px;
 }
 
 .header-icons a {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.8;
   transition: opacity 0.2s;
 }
 
 .header-icons a:hover {
-  opacity: 1;
+  opacity: 0.8;
 }
 
-.header-icons svg {
-  width: 22px;
-  height: 22px;
-  fill: #fff8ee;
+/* Instagram カラーアイコン */
+.icon-instagram svg {
+  width: 30px;
+  height: 30px;
+}
+
+/* X 黒アプリアイコン */
+.icon-x {
+  background: #000;
+  border-radius: 7px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-x svg {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
 }
 
 /* =============================
@@ -195,8 +211,7 @@ a {
 }
 
 .takeout-inner {
-  max-width: 1000px;
-  margin: 0 auto;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -211,7 +226,12 @@ a {
 }
 
 .takeout-text {
-  padding: 64px 56px;
+  padding: 64px 56px 64px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 560px;
+  justify-self: end;
 }
 
 .takeout-label {
@@ -285,8 +305,7 @@ a {
 }
 
 .about-inner {
-  max-width: 1000px;
-  margin: 0 auto;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -301,7 +320,9 @@ a {
 }
 
 .about-text {
-  padding: 64px 56px;
+  padding: 64px 80px 64px 56px;
+  max-width: 560px;
+  justify-self: start;
 }
 
 .about-text h2 {
@@ -436,16 +457,25 @@ a {
   </div>
 
   <div class="header-icons">
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/currygracen/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+    <!-- Instagram カラーアイコン -->
+    <a href="https://www.instagram.com/currygracen/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="icon-instagram">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+        <defs>
+          <radialGradient id="ig-grad" cx="30%" cy="107%" r="150%">
+            <stop offset="0%"   stop-color="#ffd87a"/>
+            <stop offset="15%"  stop-color="#f9a23e"/>
+            <stop offset="45%"  stop-color="#e1306c"/>
+            <stop offset="70%"  stop-color="#833ab4"/>
+            <stop offset="100%" stop-color="#405de6"/>
+          </radialGradient>
+        </defs>
+        <path fill="url(#ig-grad)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
       </svg>
     </a>
-    <!-- X -->
-    <a href="https://x.com/Curry_GraCen" target="_blank" rel="noopener noreferrer" aria-label="X">
+    <!-- X 黒アプリアイコン -->
+    <a href="https://x.com/Curry_GraCen" target="_blank" rel="noopener noreferrer" aria-label="X" class="icon-x">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        <path fill="#fff" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
       </svg>
     </a>
   </div>
